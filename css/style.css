@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    background-color: #9AC9D8;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    min-height: calc(100vh - 280px);
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    flex-wrap: wrap;
+    flex-direction: row; 
+}
+header {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+    z-index: 2;
+}
+
+header .logo {
+    color: #1f71a1;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8em;
+}
+
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header ul li {
+    list-style: none;
+    margin: 3px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #1f71a1;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.content {
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.content h2 {
+    padding-bottom: 10px;
+    font-size: 2em;
+    color: #1f71a1;
+}
+
+.content p {
+    font-size: 1em;
+    color: #1f71a1;
+}
+
+.content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1f71a1;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imgBox {
+    flex: 1;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.imgBox img {
+    width: 100%;
+    max-width: 500px;
+    animation: animate 5s linear infinite;
+}
+
+.icon {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon li {
+    list-style: none;
+}
+
+.icon li a {
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 5px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.icon li a img {
+    width: 25px;
+    transform: scale(0.7);
+    transition: 0.55s;
+}
+
+.icon li:hover a img {
+    transform: scale(0.7) rotate(300deg);
+}
+
+@media screen and (max-width: 768px) {
+    header .logo {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column-reverse; 
+    }
+    header ul {
+        width: 100%;
+        justify-content: center;
+    }
+    .content {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 0;
+    }
+    .imgBox {
+        margin-left: 20px;
+        margin-top: 20px;
+        order: 0; 
+    }
+    .icon {
+        flex-direction: row;
+        right: 0;
+        bottom: auto;
+        top: 20px;
+    }
+    .icon li a {
+        width: 40px;
+        height: 40px;
+    }
+    .icon li a img {
+        width: 20px;
+    }
+}
