@@ -13,7 +13,7 @@ section {
     align-items: center;
     min-height: 100vh;
     padding: 50px;
-    background-color: #9AC9D8;
+    background-color: #dcdcdc; /* Light gray */
 }
 
 .container {
@@ -30,8 +30,9 @@ section {
     justify-content: space-between;
     padding: 50px;
     flex-wrap: wrap;
-    flex-direction: row; 
+    flex-direction: row;
 }
+
 header {
     position: relative;
     padding: 20px;
@@ -50,7 +51,7 @@ header {
 }
 
 header .logo {
-    color: #1f71a1;
+    color: #333; /* Dark gray */
     font-weight: 700;
     text-decoration: none;
     font-size: 1.8em;
@@ -70,7 +71,7 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: #1f71a1;
+    color: #333; /* Dark gray */
     font-weight: bold;
     padding: 8px 15px;
     border-radius: 25px;
@@ -79,10 +80,9 @@ header ul li a {
 
 header ul li a:hover,
 header ul li a.active {
-    background-color: #fff;
+    background-color: #ddd; /* Lighter gray */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .content {
     max-width: 700px;
@@ -102,18 +102,18 @@ header ul li a.active {
 .content h2 {
     padding-bottom: 10px;
     font-size: 2em;
-    color: #1f71a1;
+    color: #333; /* Dark gray */
 }
 
 .content p {
     font-size: 1em;
-    color: #1f71a1;
+    color: #333; /* Dark gray */
 }
 
 .content a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1f71a1;
+    background-color: #333; /* Dark gray */
     color: #fff;
     margin-top: 20px;
     border-radius: 20px;
@@ -178,7 +178,7 @@ header ul li a.active {
 
 @media screen and (max-width: 600px) {
     .container {
-        flex-direction: column-reverse; 
+        flex-direction: column-reverse;
     }
     header ul {
         width: 100%;
@@ -192,7 +192,7 @@ header ul li a.active {
     .imgBox {
         margin-left: 20px;
         margin-top: 20px;
-        order: 0; 
+        order: 0;
     }
     .icon {
         flex-direction: row;

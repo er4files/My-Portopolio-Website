@@ -13,7 +13,7 @@ section {
     align-items: center;
     min-height: 100vh;
     padding: 50px;
-    background-color: #9AC9D8;
+    background-color: #dcdcdc; /* Light gray */
 }
 
 .container {
@@ -30,7 +30,7 @@ section {
     justify-content: space-between;
     padding: 50px;
     flex-wrap: wrap;
-    flex-direction: row; 
+    flex-direction: row;
 }
 
 header {
@@ -51,7 +51,7 @@ header {
 }
 
 header .logo {
-    color: #1f71a1;
+    color: #333; /* Dark gray */
     font-weight: 700;
     text-decoration: none;
     font-size: 1.8em;
@@ -71,7 +71,7 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: #1f71a1;
+    color: #333; /* Dark gray */
     font-weight: bold;
     padding: 8px 15px;
     border-radius: 25px;
@@ -80,48 +80,11 @@ header ul li a {
 
 header ul li a:hover,
 header ul li a.active {
-    background-color: #fff;
+    background-color: #ddd; /* Lighter gray */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.content1 {
-    max-width: 1200px;
-    width: 100%;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 40px;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 1;
-}
-
-.content1 h2 {
-    padding-bottom: 10px;
-    font-size: 2em;
-    color: #1f71a1;
-}
-
-.content1 p {
-    font-size: 1em;
-    color: #1f71a1;
-}
-
-.content1 a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1f71a1;
-    color: #fff;
-    margin-top: 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 1em;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
+.content1,
 .content2 {
     max-width: 1200px;
     width: 100%;
@@ -137,21 +100,24 @@ header ul li a.active {
     z-index: 1;
 }
 
+.content1 h2,
 .content2 h2 {
     padding-bottom: 10px;
     font-size: 2em;
-    color: #1f71a1;
+    color: #333; /* Dark gray */
 }
 
+.content1 p,
 .content2 p {
     font-size: 1em;
-    color: #1f71a1;
+    color: #333; /* Dark gray */
 }
 
+.content1 a,
 .content2 a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1f71a1;
+    background-color: #333; /* Dark gray */
     color: #fff;
     margin-top: 20px;
     border-radius: 20px;
@@ -159,48 +125,30 @@ header ul li a.active {
     font-size: 1em;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-/* ... (kode CSS sebelumnya tetap sama) ... */
 
-.imgBox1 {
+.imgBox1,
+.imgBox2 {
     align-items: center;
     flex: 1;
     margin-left: 20px;
     margin-top: 20px;
-    display: flex; /* Menambahkan properti display: flex */
-    justify-content: center; /* Untuk mengatur secara horizontal di tengah */
-    align-items: center; /* Untuk mengatur secara vertikal di tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.imgBox1 img {
-    border-radius: 20px;
-    width: 100%;
-    max-width: 300px;
-    animation: animate 5s linear infinite;
-}
-.imgBox1 img {
-    margin: 0 10px; /* Memberikan jarak antara dua gambar di dalam .imgBox2 */
-}
-.imgBox2 {
-    flex: 1;
-    margin-left: 20px;
-    margin-top: 20px;
-    display: flex; /* Menambahkan properti display: flex */
-    justify-content: center; /* Untuk mengatur secara horizontal di tengah */
-    align-items: center; /* Untuk mengatur secara vertikal di tengah */
-}
-
+.imgBox1 img,
 .imgBox2 img {
     border-radius: 20px;
     width: 100%;
     max-width: 300px;
     animation: animate 5s linear infinite;
 }
+
+.imgBox1 img,
 .imgBox2 img {
-    margin: 0 10px; /* Memberikan jarak antara dua gambar di dalam .imgBox2 */
+    margin: 0 10px;
 }
-
-/* ... (kode CSS setelahnya tetap sama) ... */
-
 
 .icon {
     position: absolute;
@@ -219,7 +167,7 @@ header ul li a.active {
     text-decoration: none;
     width: 50px;
     height: 50px;
-    background-color: #fff;
+    background-color: #333; /* Dark gray */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,21 +194,23 @@ header ul li a.active {
 
 @media screen and (max-width: 600px) {
     .container {
-        flex-direction: column-reverse; 
+        flex-direction: column-reverse;
     }
     header ul {
         width: 100%;
         justify-content: center;
     }
-    .content {
+    .content1,
+    .content2 {
         padding-left: 20px;
         padding-right: 20px;
         margin-top: 0;
     }
-    .imgBox {
+    .imgBox1,
+    .imgBox2 {
         margin-left: 20px;
         margin-top: 20px;
-        order: 0; 
+        order: 0;
     }
     .icon {
         flex-direction: row;
